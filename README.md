@@ -1,4 +1,5 @@
-https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/08806026ef621f900121.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230925%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230925T094934Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=13f83f6c93156be5a8c51fc304aedd89d55004c4013ff5283bd2cbd427df8b06
+![image](https://github.com/Praisedoumar/alx-frontend-javascript/assets/110107990/bf61a598-b31a-4e65-a487-5ead966553d0)
+
 
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
