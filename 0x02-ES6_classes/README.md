@@ -1,4 +1,5 @@
-https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/817248fb77fb5c2cef3f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230928%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230928T180715Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e93827c30eb1cf03f00ad3c585b9f03e8e3a9832078691595f9644c678970181
+![image](https://github.com/Praisedoumar/alx-frontend-javascript/assets/110107990/c1072a62-4df1-476b-9523-f0f4e6780af3)
+
 
 0x02. ES6 classes
 Learning Objectives
