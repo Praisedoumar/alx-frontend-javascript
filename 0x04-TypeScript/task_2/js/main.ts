@@ -1,69 +1,65 @@
+// Task 5
 interface DirectorInterface {
-  workFromHome(): string;
-  getCoffeeBreak(): string;
-  workDirectorTasks(): string;
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workDirectorTasks(): string;
 }
 
 interface TeacherInterface {
-  workFromHome(): string;
-  getCoffeeBreak(): string;
-  workTeacherTasks(): string;
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workTeacherTasks(): string;
 }
 
 class Director implements DirectorInterface {
-  workFromHome(): string {
-  return 'Working from home';
-  }
-
-  getCoffeeBreak(): string {
-  return 'Getting a coffee break';
-  }
-
-  workDirectorTasks(): string {
-  return 'Getting to director tasks';
-  }
+    constructor() {}
+    workFromHome(): string {
+        return 'Working from home';
+    }
+    getCoffeeBreak(): string {
+        return 'Getting a coffee break';
+    }
+    workDirectorTasks(): string {
+        return 'Getting to director tasks';
+    }
 }
 
 class Teacher implements TeacherInterface {
-  workFromHome(): string {
-  return 'Cannot work from home';
-  }
-
-  getCoffeeBreak(): string {
-  return 'Cannot have a break';
-  }
-
-  workTeacherTasks(): string {
-  return 'Getting to work';
-  }
+    constructor() {}
+    workFromHome(): string {
+        return 'Cannot work from home';
+    }
+    getCoffeeBreak(): string {
+        return 'Cannot have a break';
+    }
+    workTeacherTasks(): string {
+        return 'Getting to work';
+    }
 }
 
-function createEmployee(salary: number | string): Director | Teacher {
-  if (typeof salary === 'number' && salary < 500) {
-    return new Teacher();
-  } else {
+function createEmployee(salary: string | number): Teacher | Director {
+    if (typeof salary === 'number' && salary < 500) {
+        return new Teacher();
+    }
     return new Director();
-  }
 }
 
-function isDirector(employee: Director | Teacher): employee is Director {
-  return 'workDirectorTasks' in employee;
+// Task 6
+function isDirector(employee: any): employee is Director {
+    return employee instanceof Director;
 }
 
-function executeWork(employee: Director | Teacher): void {
-  if (isDirector(employee)) {
-    console.log(employee.workDirectorTasks());
-  } else {
-    console.log(employee.workTeacherTasks());
-  }
+function executeWork(employee: Director | Teacher): string {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
+    }
 }
 
+// Task 7
 type Subjects = 'Math' | 'History';
 
 function teachClass(todayClass: Subjects): string {
-  if (todayClass === 'Math') {
-    return 'Teaching Math';
-  } else {
-    return 'Teaching History';
-  }
+    return `Teaching ${todayClass}`;
 }

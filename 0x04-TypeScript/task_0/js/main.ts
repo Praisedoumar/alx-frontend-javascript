@@ -1,45 +1,43 @@
-// Define Student interface
 interface Student {
-  firstName: string;
-  lastName: string;
-  age: number;
-  location: string;
+    firstName: string;
+    lastName: string;
+    age: number;
+    location: string;
 }
 
 const student1: Student = {
-  firstName: "John",
-  lastName: "Wick",
-  age: 20,
-  location: "Nairobi",
+    firstName: 'Anna',
+    lastName: 'Smith',
+    age: 17,
+    location: 'New York',
 };
 
 const student2: Student = {
-  firstName: "Jane",
-  lastName: "Smith",
-  age: 26,
-  location: "Kampala",
+    firstName: 'Betty',
+    lastName: 'Smith',
+    age: 16,
+    location: 'New York',
 };
 
 const studentsList: Student[] = [student1, student2];
 
-// Render table using Javascript
-const table = document.createElement("table");
+// Table rendering
+const table = document.createElement('table');
 
-// Append table headers
-const headerRow = table.insertRow();
-const header1 = headerRow.insertCell(0);
-header1.textContent = "First Name";
-const header2 = headerRow.insertCell(1);
-header2.textContent = "Location";
+const thead = document.createElement('thead');
+const headerRow = document.createElement('tr');
 
-// Append rows for each student
+headerRow.innerHTML = '<th>First Name</th><th>Location</th>';
+thead.appendChild(headerRow);
+
+const tbody = document.createElement('tbody');
 studentsList.forEach((student) => {
-  const row = table.insertRow();
-  const cell1 = row.insertCell(0);
-  cell1.textContent = student.firstName;
-  const cell2 = row.insertCell(1);
-  cell2.textContent = student.location;
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${student.firstName}</td><td>${student.location}</td>`;
+    tbody.appendChild(row);
 });
 
-// Append the table to the body of the document
+table.appendChild(thead);
+table.appendChild(tbody);
+
 document.body.appendChild(table);
